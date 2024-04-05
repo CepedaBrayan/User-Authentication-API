@@ -1,14 +1,17 @@
-version: '3'
-
+version: "3.9"
 services:
-  postgres:
-    image: postgres:latest
-    container_name: postgres
+  db:
+    image: postgres:14.1-alpine
+    restart: always
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: admin
-      POSTGRES_DB: user_auth
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=user_auth
     ports:
       - "5432:5432"
     volumes:
-      - ./data:/var/lib/postgresql/data
+      - db_volume:/var/lib/postgresql/data
+
+volumes:
+  db_volume:
+    driver: local
