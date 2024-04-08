@@ -5,7 +5,9 @@
 
   ## Installation
   
-  This backend application is built with NestJS, a progressive Node.js framework. To install the application, follow the steps below:
+  This backend application is built with NestJS, a progressive Node.js framework.
+  Is necessary to have Node.js and npm installed on your machine to run the application, also Docker to run the PostgreSQL database. 
+  To install the application, follow the steps below:
 
   1. Build and up the Docker container which contains the PostgreSQL database:
   ```bash
@@ -17,7 +19,7 @@
   npm install
   ```
 
-  note: create a `.env` file base on the .env.example file and set the environment variables.
+  note: create a `.env` file base on the `.env.example` file and set the environment variables.
 
   3. Run the application in development mode:
   ```bash
@@ -39,7 +41,7 @@
 
   ## Testing
 
-  Here we have test for each endpoint, into the file `test/app.e2e-spec.ts`.
+  Here we have tests for each endpoint, into the file `test/app.e2e-spec.ts`.
 
   To run the tests, use the following command:
   ```bash
