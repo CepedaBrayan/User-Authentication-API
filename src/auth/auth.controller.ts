@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, Post } from '@nestjs/common';
 import { ApiBearerAuth, ApiOkResponse, ApiTags } from '@nestjs/swagger';
 import { LogInDto, LogInResponseDto } from '../dto/log-in.dto';
 import { Public } from './auth.decorator';
@@ -14,6 +14,7 @@ export class AuthController {
   @Post('login')
   @Public()
   @ApiOkResponse({ type: LogInResponseDto })
+  @HttpCode(200)
   logIn(@Body() logInDto: LogInDto) {
     return this.authService.logIn(logInDto);
   }
