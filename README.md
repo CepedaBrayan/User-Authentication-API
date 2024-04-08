@@ -14,22 +14,22 @@
   docker-compose up
   ```
 
-  2. Install the dependencies:
+  2. Open another terminal and install the dependencies:
   ```bash
   npm install
   ```
 
   Note: create a `.env` file base on the `.env.example` file and set the environment variables.
 
-  3. Run the migrations to create the tables in the database:
-  ```bash
-  npm run typeorm migration:run
-  ``` 
-
   3. Run the application in development mode:
   ```bash
   npm run start:dev
   ```
+
+  4. In another terminal run the migrations to create the tables in the database:
+  ```bash
+  npm run typeorm migration:run
+  ``` 
 
   ## Usage
 
