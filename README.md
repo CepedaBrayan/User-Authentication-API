@@ -19,7 +19,12 @@
   npm install
   ```
 
-  note: create a `.env` file base on the `.env.example` file and set the environment variables.
+  Note: create a `.env` file base on the `.env.example` file and set the environment variables.
+
+  3. Run the migrations to create the tables in the database:
+  ```bash
+  npm run typeorm migration:run
+  ``` 
 
   3. Run the application in development mode:
   ```bash
